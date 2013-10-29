@@ -21,14 +21,5 @@
 
 
 
-    <fragment
-        android:id="@+id/fragmentTweets"
-        android:name="com.codepath.apps.mytwitterapp.fragments.TweetsListFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        tools:layout="@layout/fragment_tweets_list" />
-
 
 </RelativeLayout>

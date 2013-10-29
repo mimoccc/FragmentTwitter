@@ -27,7 +27,6 @@ public class ProfileActivity extends FragmentActivity {
 		
 		RequestParams params = null;
 	    String userId = getIntent().getStringExtra("screen_name");
-	    Log.i("PROFILE-USER_ID", userId);
 	    if (userId != null) {
 	    	params = new RequestParams();
 	    	params.put("screen_name", userId);
@@ -35,7 +34,6 @@ public class ProfileActivity extends FragmentActivity {
 	    	MyTwitterApp.getRestClient().getUserTimeline(params, new JsonHttpResponseHandler() {
 				@Override
 				public void onSuccess(JSONArray jsonTweets) {
-					
 					ArrayList<Tweet> tweets = Tweet.fromJson(jsonTweets);
 					User user = tweets.get(0).getUser();
 					getActionBar().setTitle("@" + user.getScreenName());
